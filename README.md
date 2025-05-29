@@ -22,13 +22,13 @@ bundle install
 ```bash
 <%= form_guard_fields %>
 ```
-form_guard_fields will add a honeypot and a timestamp field automatically.
 
 2. Add guard check to your controller:
 
 ```bash
 before_action -> { verify_form_guard!(min_delay: 1.5) }, only: [:create]
 ```
+You can override the delay seconds: (min_delay: 3.0)
 
 ## How it works
 
