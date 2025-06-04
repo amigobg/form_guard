@@ -23,18 +23,11 @@ bundle install
 <%= form_guard_fields %>
 ```
 
-2. Add guard check to your controller:
-
-```bash
-before_action -> { verify_form_guard!(min_delay: 1.5) }, only: [:create]
-```
-You can override the delay seconds: (min_delay: 3.0)
-
 ## How it works
 
 - Bots tend to fill all fields — including hidden ones. If the honeypot is filled, the submission is rejected.
 
-- Bots submit instantly. If the form is submitted too quickly (under min_delay seconds), it’s probably a bot.
+- Bots submit instantly. If the form is submitted too quickly (under 2 seconds), it’s probably a bot.
 
 ## Contributing
 
