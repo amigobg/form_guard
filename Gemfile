@@ -7,5 +7,6 @@ gemspec
 
 gem "rails", "~> 6.1"
 gem "rake", "~> 13.0"
+gem "zeitwerk", "< 2.7"
 gem "minitest", "~> 5.16"
 
